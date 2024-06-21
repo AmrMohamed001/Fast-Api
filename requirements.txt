@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+tensorflow
+keras
+keras_preprocessing
+pillow
+numpy
