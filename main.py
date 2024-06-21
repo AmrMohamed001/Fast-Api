@@ -8,7 +8,7 @@ from PIL import Image
 app = FastAPI()
 
 # Load the saved model
-model = keras.models.load_model("knee_xray_Xceptionnet_complete_model.h5")
+model = keras.models.load_model("https://media.githubusercontent.com/media/AmrMohamed001/Fast-Api/master/knee_xray_Xceptionnet_complete_model.h5")
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
@@ -25,4 +25,4 @@ async def predict(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8004)
+    uvicorn.run(app, host="0.0.0.0", port=8004)
